@@ -7,9 +7,9 @@ public class App
     public static void main( String[] args ){
         Scanner sc = new Scanner(System.in);
         
-        System.out.println("Anna auton merkki: ");
+        System.out.print("Anna auton merkki: ");
         String brand = sc.nextLine();
-        System.out.println("Anna auton malli: ");
+        System.out.print("Anna auton malli: ");
         String model = sc.nextLine();
 
         Car car = new Car(brand, model, 0);
@@ -34,22 +34,22 @@ public class App
                     car.status();
                     break;
                 case 2:
-                    System.out.println("Anna auton uusi merkki: ");
+                    System.out.print("Anna uusi auton merkki: ");
                     String newbrand = sc.nextLine();
-                    System.out.println("Anna auton uusi malli: ");
+                    System.out.print("Anna uusi auton malli: ");
                     String newmodel = sc.nextLine();
 
                     newCar = new Car(newbrand, newmodel, 0);
                     car = newCar;
                     break;
                 case 3:
-                    System.out.println("Kuinka monta km/h haluat kiihdyttää?");
+                    System.out.print("Kuinka monta km/h haluat kiihdyttää?");
                     stringInput = sc.nextLine();
                     int kasvu = Integer.parseInt(stringInput);
                     car.accelerate(kasvu);
                     break;
                 case 4:
-                    System.out.println("Kuinka monta km/h haluat hidastaa?");
+                    System.out.print("Kuinka monta km/h haluat hidastaa?");
                     stringInput = sc.nextLine();
                     int vahennys = Integer.parseInt(stringInput);
                     car.decelerate(vahennys);
